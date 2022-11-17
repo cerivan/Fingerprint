@@ -130,3 +130,23 @@ function onDeviceReady() {
 }
 
 document.addEventListener('deviceready', onDeviceReady, false); 
+FingerprintAuth.isAvailable(isAvailableSuccess, isAvailableError);
+
+/**
+ * @return {
+ *      isAvailable:boolean,
+ *      isHardwareDetected:boolean,
+ *      hasEnrolledFingerprints:boolean
+ *   }
+ */
+function isAvailableSuccess(result) {
+    console.log("FingerprintAuth available: " + JSON.stringify(result));
+    if (result.isAvailable) {
+        var encryptConfig = {}; // See config object for required parameters
+        FingerprintAuth.encrypt(encryptConfig, encryptSuccessCallback, encryptErrorCallback);
+    }
+}
+
+function isAvailableError(message) {
+    console.log("isAvailableError(): " + message);
+}

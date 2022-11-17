@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.logatik.geoloc" version="1.1.4" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.navirec.finger" version="1.1.4" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Finger</name>
 
 	<description>Application Finger</description>
@@ -58,6 +58,14 @@
 			<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
 		</custom-config-file>
+		<config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FingerprintAuth" >
+                <param name="android-package" value="com.cordova.plugin.android.fingerprintauth.FingerprintAuth"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+        </config-file>
 	</platform>
 	
 	<platform name="android">
@@ -66,5 +74,6 @@
         <allow-intent href="market:*" />
     </platform>
     <plugin name="cordova-plugin-whitelist" spec="1" />
+	<plugin name="cordova-plugin-android-fingerprint-auth" />
     
 </widget>
