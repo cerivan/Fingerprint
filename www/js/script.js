@@ -129,24 +129,35 @@ function onDeviceReady() {
 	
 }
 
-document.addEventListener('deviceready', onDeviceReady, false); 
-FingerprintAuth.isAvailable(isAvailableSuccess, isAvailableError);
+//document.addEventListener('deviceready', onDeviceReady, false); 
 
-/**
- * @return {
- *      isAvailable:boolean,
- *      isHardwareDetected:boolean,
- *      hasEnrolledFingerprints:boolean
- *   }
- */
-function isAvailableSuccess(result) {
-    console.log("FingerprintAuth available: " + JSON.stringify(result));
-    if (result.isAvailable) {
-        var encryptConfig = {}; // See config object for required parameters
-        FingerprintAuth.encrypt(encryptConfig, encryptSuccessCallback, encryptErrorCallback);
+Fingerprint.isAvailable(isAvailableSuccess, isAvailableError, optionalParams);
+
+    function isAvailableSuccess(result) {
+      /*
+      result depends on device and os. 
+      iPhone X will return 'face' other Android or iOS devices will return 'finger' Android P+ will return 'biometric'
+      */
+      alert("Fingerprint available");
     }
-}
 
-function isAvailableError(message) {
-    console.log("isAvailableError(): " + message);
-}
+    function isAvailableError(error) {
+      // 'error' will be an object with an error code and message
+      alert(error.message);
+    }
+
+
+Fingerprint.show({
+      description: "Some biometric description"
+    }, successCallback, errorCallback);
+
+    function successCallback(){
+      alert("Authentication successful");
+    }
+
+    function errorCallback(error){
+      alert("Authentication invalid " + error.message);
+    }
+
+
+
