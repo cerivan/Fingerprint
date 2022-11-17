@@ -1,0 +1,7 @@
+{
+  "name": "Fingerprint",
+  "type": "custom",
+  "integrations": {
+    "cordova": {}
+  }
+}

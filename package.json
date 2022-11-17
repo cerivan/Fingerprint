@@ -1,0 +1,19 @@
+{
+  "name": "Fingerprint",
+  "version": "1.0.7",
+  "description": "", 
+  "main": "index.js",
+  "scripts": {
+    "test": "Passage du test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cerivan/Fingerprint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cerivan/Fingerprint.git/issues"
+  },
+  "homepage": "https://github.com/cerivan/Fingerprint.git#readme"
+}
