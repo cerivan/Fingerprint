@@ -1,5 +1,5 @@
 function onDeviceReady() {
-	Fingerprint.isAvailable(isAvailableSuccess, isAvailableError, optionalParams);
+	Fingerprint.isAvailable(isAvailableSuccess, isAvailableError, null);
 
     function isAvailableSuccess(result) {
       /*
