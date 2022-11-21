@@ -24,6 +24,7 @@ function onDeviceReady() {
 
     function successCallback(){
 		console.log("Authentication successful");
+		location.href = 'compte.html';
     }
 
     function errorCallback(error){
