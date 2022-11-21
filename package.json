@@ -1,10 +1,10 @@
 {
-  "name": "Fingerprint",
-  "version": "1.0.7",
-  "description": "", 
-  "main": "index.js",
+  "name": "Distingo Démo",
+  "version": "1.1.0",
+  "description": "Application Distingo Démo", 
+  "main": "script.js",
   "scripts": {
-    "test": "Passage du test"
+    "test": "Distingo Démo"
   },
   "repository": {
     "type": "git",

@@ -1,38 +1,39 @@
+document.addEventListener('deviceready', onDeviceReady, false); 
+
 function onDeviceReady() {
 	Fingerprint.isAvailable(isAvailableSuccess, isAvailableError, null);
 
     function isAvailableSuccess(result) {
-      /*
-      result depends on device and os. 
-      iPhone X will return 'face' other Android or iOS devices will return 'finger' Android P+ will return 'biometric'
-      */
-      alert("Fingerprint available");
+		/*
+		result depends on device and os. 
+		iPhone X will return 'face' other Android or iOS devices will return 'finger' Android P+ will return 'biometric'
+		*/
+		console.log("Fingerprint available");
     }
 
     function isAvailableError(error) {
-      // 'error' will be an object with an error code and message
-      alert(error.message);
+		// 'error' will be an object with an error code and message
+		console.log(error.message);
     }
 
-
-Fingerprint.show({
-      description: "Some biometric description"
-    }, successCallback, errorCallback);
+	Fingerprint.show({
+		title: "<APP_NAME> Confirmer votre identité",
+		description: "Utilisez votre empreinte digitale pour continuer",
+		fallbackButtonTitle: "Annuler"
+	}, successCallback, errorCallback);
 
     function successCallback(){
-      alert("Authentication successful");
+		console.log("Authentication successful");
     }
 
     function errorCallback(error){
-      alert("Authentication invalid " + error.message);
-    }
-
-	
+		console.log("Authentication invalid " + error.message);
+    }	
 	
 	
 }
 
-document.addEventListener('deviceready', onDeviceReady, false); 
+
 
 
 
