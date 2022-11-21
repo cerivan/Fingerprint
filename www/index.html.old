@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">	
+		<link rel="stylesheet" href="css/reset.min.css">
+		
+		<!-- Required styles for MDC Web -->
+		<link rel="stylesheet" href="css/material-components-web.min.css">
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Roboto">
+		<link rel="stylesheet" href="css/all.css">
+		<link rel="stylesheet" href="css/leaflet.css">
+		<link rel="stylesheet" href="css/style.css">		
+	</head>
+	
+	<body class="mdc-typography">
+		<header class="mdc-top-app-bar">
+			<div class="mdc-top-app-bar__row">
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+					<span class="mdc-top-app-bar__title"><img src="images/cemex.png" height="30px"></span>
+				</section>
+			</div>
+		</header>
+		
+		<div class="mdc-drawer-scrim"></div>	
+		<div class="mdc-drawer-app-content">
+			<main class="main-content" id="main-content">	
+				<div id="map"></div>			
+			</main>
+		</div>	
+		
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!-- Required MDC Web JavaScript library -->
+		<script src="js/material-components-web.min.js"></script>
+		<script src="js/leaflet.js"></script>
+		<script src="js/script.js"></script>
+		<script>
+
+			
+			
+		</script>
+	
+	
+	</body>
+</html>
