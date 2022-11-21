@@ -2,7 +2,7 @@
   "name": "Distingo Démo",
   "version": "1.1.0",
   "description": "Application Distingo Démo", 
-  "main": "splash.js",
+  "main": "index.js",
   "scripts": {
     "test": "Distingo Démo"
   },
