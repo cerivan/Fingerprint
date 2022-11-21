@@ -55,7 +55,7 @@
 	
 	<platform name="android">
         <resource-file src="resources/icons/icon-distingo.png" target="app/src/main/res/mipmap/icon.png"/>
-		<resource-file src="www/images/notif-distingo.png" target="app/src/main/res/mipmap/notif.png"/>
+		<!-- <resource-file src="www/images/notif-distingo.png" target="app/src/main/res/mipmap/notif.png"/> -->
         <allow-intent href="market:*" />
     </platform>
     <plugin name="cordova-plugin-whitelist" spec="1" />
