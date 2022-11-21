@@ -5,7 +5,7 @@
 	<description>Application Distingo Démo</description>
 
 	<author href="http://www.cerivan.com" email="mail@cerivan.com">	Cerivan	</author>
-	<content src="index.html" />
+	<content src="splash.html" />
         
 	<icon src="resources/icons/icon-distingo.png" width="80" height="80" density="mdpi" />
 	<preference name="android-targetSdkVersion" value="29" />	
