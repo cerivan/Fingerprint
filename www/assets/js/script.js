@@ -18,7 +18,7 @@ function onDeviceReady() {
     }
 
 	Fingerprint.show({
-		title: "Confirmer votre identité",
+		title: "Confirmez votre identité",
 		description: "Utilisez votre empreinte digitale pour continuer",
 		cancelButtonTitle: "Annuler"
 	}, successCallback, errorCallback);
