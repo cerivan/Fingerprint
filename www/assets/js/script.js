@@ -1,5 +1,6 @@
 document.addEventListener('deviceready', onDeviceReady, false); 
 
+
 function onDeviceReady() {
 	Fingerprint.isAvailable(isAvailableSuccess, isAvailableError, null);
 
@@ -35,7 +36,12 @@ function onDeviceReady() {
 }
 
 
-
+//-----------------------------------------------------------------------
+// IF CLICK ON FINGER
+//-----------------------------------------------------------------------
+document.getElementById('finger').addEventListener("click", function () {
+	document.addEventListener('deviceready', onDeviceReady, false); 
+})
 
 
 
